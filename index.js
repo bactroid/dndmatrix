@@ -18,7 +18,6 @@
       if (n === 1) {
         return [fn()]
       }
-        // return arr.concat([fn(), arrayFill(fn, n - 1)]);
       return arr.concat([fn()].concat(arrayFill(fn, n - 1)))
     }
     return arrayFill(fn, n)
