@@ -1,0 +1,15 @@
+{
+  "name": "dndmatrix",
+  "version": "1.0.0",
+  "description": "Roll up a D&D stat roll matrix",
+  "main": "index.js",
+  "dependencies": {
+    "ramda": "^0.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kate Haskell <fuzzcat@bactroid.net>",
+  "license": "ISC"
+}
