@@ -15,8 +15,7 @@ const rollDie = max => Math.floor((Math.random() * max) + 1)
 const rollD6 = () => rollDie(6)
 const generateRolls = () => fillArray(rollD6, 4)
 const sortRolls = arr => arr.concat().sort()
-const dropLow = arr =>
-sortRolls(arr).slice(1)
+const dropLow = arr => sortRolls(arr).slice(1)
 const sum = arr => arr.reduce((a, b) => a + b, 0)
 const generateStat = R.pipe(generateRolls, sortRolls, dropLow, sum)
 
