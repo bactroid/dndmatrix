@@ -24,6 +24,7 @@
     return arrayFill(fn, n)
   }
 
-  const statsArray = fillArray(generateStat, 6)
-  console.log(statsArray)
+  const generateStatArray = () => fillArray(generateStat, 6)
+
+  console.log(fillArray(generateStatArray, 6))
 }())
