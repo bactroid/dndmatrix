@@ -11,5 +11,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kate Haskell <fuzzcat@bactroid.net>",
-  "license": "ISC"
+  "license": "GPLv3"
 }
