@@ -4,6 +4,7 @@
   "description": "Roll up a D&D stat roll matrix",
   "main": "index.js",
   "dependencies": {
+    "markdown-table": "^1.1.0",
     "ramda": "^0.23.0"
   },
   "devDependencies": {
