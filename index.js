@@ -3,15 +3,6 @@
 
   const R = require('ramda')
 
-  const rollDie = max => Math.floor((Math.random() * max) + 1)
-  const sortRolls = arr => arr.concat().sort()
-  const dropLow = arr =>
-    sortRolls(arr).slice(1)
-  const generateRolls = () =>
-    [rollDie(6), rollDie(6), rollDie(6), rollDie(6)]
-  const sum = arr => arr.reduce((a, b) => a + b, 0)
-  const generateStat = R.pipe(generateRolls, sortRolls, dropLow, sum)
-
   const fillArray = (fn, n) => {
     let arr = []
     const arrayFill = (fn, n) => {
@@ -22,6 +13,15 @@
     }
     return arrayFill(fn, n)
   }
+
+  const rollDie = max => Math.floor((Math.random() * max) + 1)
+  const rollD6 = () => rollDie(6)
+  const generateRolls = () => fillArray(rollD6, 4)
+  const sortRolls = arr => arr.concat().sort()
+  const dropLow = arr =>
+    sortRolls(arr).slice(1)
+  const sum = arr => arr.reduce((a, b) => a + b, 0)
+  const generateStat = R.pipe(generateRolls, sortRolls, dropLow, sum)
 
   const generateStatMatrix = () => fillArray(generateStat, 6)
 
