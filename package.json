@@ -6,9 +6,11 @@
   "dependencies": {
     "ramda": "^0.23.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "standard": "^10.0.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "author": "Kate Haskell <fuzzcat@bactroid.net>",
   "license": "GPLv3"
