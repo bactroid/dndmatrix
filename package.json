@@ -2,16 +2,17 @@
   "name": "dndmatrix",
   "version": "1.0.0",
   "description": "Roll up a D&D stat roll matrix",
-  "main": "index.js",
+  "main": "dndmatrix.js",
   "dependencies": {
     "markdown-table": "^1.1.0",
     "ramda": "^0.23.0"
   },
   "devDependencies": {
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "tape": "^4.6.3"
   },
   "scripts": {
-    "test": "standard"
+    "test": "standard && node dndmatrix.test.js"
   },
   "author": "Kate Haskell <fuzzcat@bactroid.net>",
   "license": "GPLv3"

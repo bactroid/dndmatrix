@@ -27,4 +27,15 @@ const outputTable = matrix => {
 
 const generateStatMatrix = () => fillArray(generateStat, 6)
 
-console.log(outputTable(fillArray(generateStatMatrix, 6)))
+module.exports = {
+  fillArray,
+  rollDie,
+  rollD6,
+  generateRolls,
+  sortRolls,
+  dropLow,
+  sum,
+  generateStat,
+  outputTable,
+  generateStatMatrix
+}
