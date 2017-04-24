@@ -11,6 +11,9 @@
     "standard": "^10.0.2",
     "tape": "^4.6.3"
   },
+  "bin": {
+    "dndmatrix": "bin/dndmatrix.js"
+  },
   "scripts": {
     "test": "standard && node dndmatrix.test.js"
   },
