@@ -18,5 +18,13 @@
     "test": "standard && node dndmatrix.test.js"
   },
   "author": "Kate Haskell <fuzzcat@bactroid.net>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bactroid/dndmatrix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bactroid/dndmatrix/issues"
+  },
+  "homepage": "https://github.com/bactroid/dndmatrix#readme"
 }
