@@ -18,5 +18,5 @@
     "test": "standard && node dndmatrix.test.js"
   },
   "author": "Kate Haskell <fuzzcat@bactroid.net>",
-  "license": "GPLv3"
+  "license": "GPL-3.0"
 }
