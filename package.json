@@ -16,7 +16,7 @@
   "scripts": {
     "test": "standard && node dndmatrix.test.js"
   },
-  "author": "Kate Haskell <fuzzcat@bactroid.net>",
+  "author": "Kate Haskell <fuzzcat@bactroid.net> (http://bactroid.net)",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
