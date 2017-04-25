@@ -1,4 +1,3 @@
-const R = require('ramda')
 const table = require('markdown-table')
 
 const fillArray = (fn, n) => {
@@ -18,7 +17,7 @@ const generateRolls = () => fillArray(rollD6, 4)
 const sortRolls = arr => arr.concat().sort()
 const dropLow = arr => sortRolls(arr).slice(1)
 const sum = arr => arr.reduce((a, b) => a + b, 0)
-const generateStat = R.pipe(generateRolls, sortRolls, dropLow, sum)
+const generateStat = () => sum(dropLow(sortRolls(generateRolls())))
 
 const outputTable = matrix => {
   const header = '|     |     |     |     |     |     |\n|-----|-----|-----|-----|-----|-----|\n'
