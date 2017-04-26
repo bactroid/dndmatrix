@@ -1,12 +1,14 @@
 {
   "name": "dndmatrix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Roll up a D&D stat roll matrix",
-  "main": "dndmatrix.js",
+  "main": "./dist/dndmatrix.js",
   "dependencies": {
     "markdown-table": "^1.1.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "standard": "^10.0.2",
     "tape": "^4.6.3"
   },
@@ -14,7 +16,10 @@
     "dndmatrix": "bin/dndmatrix.js"
   },
   "scripts": {
-    "test": "standard && node dndmatrix.test.js"
+    "test": "standard && node src/dndmatrix.test.js",
+    "prebuild": "npm run test",
+    "build": "babel src --presets babel-preset-es2015 --out-dir dist",
+    "prepublish": "npm run build"
   },
   "author": "Kate Haskell <fuzzcat@bactroid.net> (http://bactroid.net)",
   "license": "GPL-3.0",
