@@ -18,10 +18,6 @@ const dnd = require('dndmatrix')
 
 If you've installed the developer dependencies, you should be able to run `npm test`. Both [standard](https://www.npmjs.com/package/standard) and [tape](https://github.com/substack/tape) are used for the test suite.
 
-## Requirements
-
-This module uses the [ramda](https://www.npmjs.com/package/ramda) library for function composition.
-
 ## Provided Functions
 
 ### `fillArray(fn, n)`
