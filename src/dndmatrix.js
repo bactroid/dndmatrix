@@ -24,7 +24,8 @@ const outputTable = matrix => {
   return header + table(matrix, {rule: false})
 }
 
-const generateStatMatrix = () => fillArray(generateStat, 6)
+const generateStatArray = () => fillArray(generateStat, 6)
+const generateStatMatrix = () => fillArray(generateStatArray, 6)
 
 module.exports = {
   fillArray,

@@ -56,6 +56,10 @@ Returns a randomly generated integer between 3 and 18 using the algorithm 4d6, d
 
 Given a six-element array of six-element arrays `matrix`, returns a Github Flavored Markdown table that displays all the integers.
 
+### `generateStatArray()`
+
+Returns a six-element array of stat rolls.
+
 ### `generateStatMatrix()`
 
-Returns a six-element array of six-element arrays of stat rolls.
+Returns a six-element array of six stat rolls.
