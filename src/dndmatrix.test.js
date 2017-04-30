@@ -46,6 +46,14 @@ test('sum', assert => {
   assert.end()
 })
 
+test('generateStat', assert => {
+  const rollFn = () => [6, 1, 6, 6]
+  const expected = 18
+  const actual = dndmatrix.generateStat(rollFn)
+  assert.equal(actual, expected, 'generateStat should roll 4d6, drop the lowest roll, and return the sum')
+  assert.end()
+})
+
 test('fillArray', assert => {
   const fn = () => 18
   const expected = [18, 18, 18, 18, 18, 18]
