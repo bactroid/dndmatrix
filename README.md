@@ -24,17 +24,19 @@ If you've installed the developer dependencies, you should be able to run `npm t
 
 Returns an array with `n` elements that are the results of function `fn`.
 
-### `rollDie(max)`
+### `rollDie(max, randomFn = Math.random)`
 
-Returns a random integer between 1 and `max`.
+Returns a random integer between 1 and `max`. By default, the library uses `Math.random`, but you can inject any preferred random number function.
 
 ### `rollD6()`
 
 Returns a random integer between 1 and 6 (1d6).
 
-### `generateRolls()`
+### `generateRolls(rollFn = rollD6)`
 
 Returns an array with four random numbers between 1 and 6 (4d6).
+
+By default, the function uses `rollD6` to generate rolls. While this is mainly to allow for unit testing, you could also choose to inject the die roll of your choice here.
 
 ### `sortRolls(arr)`
 
@@ -48,9 +50,11 @@ Returns an array based on `arr` without the first element. If sorted in ascendin
 
 Returns the sum of all integers in array `arr`.
 
-### `generateStat()`
+### `generateStat(rollFn = generateRolls)`
 
-Returns a randomly generated integer between 3 and 18 using the algorithm 4d6, drop the lowest value, and add the remaining 3 die rolls.
+By default, returns a randomly generated integer between 3 and 18 using the algorithm 4d6, drop the lowest value, and add the remaining 3 die rolls. However the function that provides 4d6 rolls can be injected with the function of your choice. While this is mainly to allow unit testing, you could also override stat generation in some interesting ways here.
+
+This function will likely be further paramterized in the future to allow other custom rolls (3d6 or 5d6 dropping the lowest two rolls, for example).
 
 ### `outputTable(matrix)`
 
