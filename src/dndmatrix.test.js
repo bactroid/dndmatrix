@@ -1,7 +1,20 @@
 const {test} = require('tape')
 const dndmatrix = require('./dndmatrix')
 
-test('sortRolls', (assert) => {
+test('rollDie', assert => {
+  const min = 1
+  const max = 6
+  const minFn = () => 0.00001
+  const maxFn = () => 0.99999
+
+  const minActual = dndmatrix.rollDie(min, minFn)
+  const maxActual = dndmatrix.rollDie(max, maxFn)
+  assert.equal(minActual, min, 'rollDie should be able to roll the minimum result')
+  assert.equal(maxActual, max, 'rollDie should be able to roll the maximum result')
+  assert.end()
+})
+
+test('sortRolls', assert => {
   const rolls = [6, 2, 3, 1]
   const expected = [1, 2, 3, 6]
   const actual = dndmatrix.sortRolls(rolls)
@@ -9,7 +22,7 @@ test('sortRolls', (assert) => {
   assert.end()
 })
 
-test('dropLow', (assert) => {
+test('dropLow', assert => {
   const rolls = [3, 4, 5, 6]
   const expected = [4, 5, 6]
   const actual = dndmatrix.dropLow(rolls)
@@ -17,7 +30,7 @@ test('dropLow', (assert) => {
   assert.end()
 })
 
-test('sum', (assert) => {
+test('sum', assert => {
   const rolls = [6, 6, 6]
   const expected = 18
   const actual = dndmatrix.sum(rolls)
@@ -25,7 +38,7 @@ test('sum', (assert) => {
   assert.end()
 })
 
-test('fillArray', (assert) => {
+test('fillArray', assert => {
   const fn = () => 18
   const expected = [18, 18, 18, 18, 18, 18]
   const actual = dndmatrix.fillArray(fn, 6)

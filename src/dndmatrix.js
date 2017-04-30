@@ -11,7 +11,7 @@ const fillArray = (fn, n) => {
   return arrayFill(fn, n)
 }
 
-const rollDie = max => Math.floor((Math.random() * max) + 1)
+const rollDie = (max, randomFn = Math.random) => Math.floor((randomFn() * max) + 1)
 const rollD6 = () => rollDie(6)
 const generateRolls = () => fillArray(rollD6, 4)
 const sortRolls = arr => arr.concat().sort()
