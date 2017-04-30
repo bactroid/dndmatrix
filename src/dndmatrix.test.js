@@ -77,3 +77,11 @@ test('outputTable', assert => {
   assert.equal(actual, expected, 'outputTable should output a Github-flavored markedown table of the matrix values')
   assert.end()
 })
+
+test('generateStatArray', assert => {
+  const statFn = () => 12
+  const expected = [12, 12, 12, 12, 12, 12]
+  const actual = dndmatrix.generateStatArray(statFn)
+  assert.deepEqual(actual, expected, 'generateStatArray should return a six-element array of D&D stats')
+  assert.end()
+})

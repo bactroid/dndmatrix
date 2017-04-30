@@ -60,9 +60,9 @@ This function will likely be further paramterized in the future to allow other c
 
 Given a six-element array of six-element arrays `matrix`, returns a Github Flavored Markdown table that displays all the integers.
 
-### `generateStatArray()`
+### `generateStatArray(statFn = generateStat)`
 
-Returns a six-element array of stat rolls.
+Returns a six-element array of stat rolls. The function to generate a stat roll can be injected, allowing for both unit testing and custom behavior. (Munchkins rejoice!)
 
 ### `generateStatMatrix()`
 
