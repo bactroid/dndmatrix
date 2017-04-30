@@ -57,7 +57,7 @@ test('generateStat', assert => {
 test('fillArray', assert => {
   const fn = () => 18
   const expected = [18, 18, 18, 18, 18, 18]
-  const actual = dndmatrix.fillArray(fn, 6)
+  const actual = dndmatrix.fillArray(6)(fn)
   assert.deepEqual(actual, expected, 'fillArray should create an array with n elements using the result a function fn')
   assert.end()
 })

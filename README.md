@@ -20,9 +20,9 @@ If you've installed the developer dependencies, you should be able to run `npm t
 
 ## Provided Functions
 
-### `fillArray(fn, n)`
+### `fillArray(n)(fn)`
 
-Returns an array with `n` elements that are the results of function `fn`.
+Returns an array with `n` elements that are the results of function `fn`. This function is curried to allow partial application of arguments.
 
 ### `rollDie(max, randomFn = Math.random)`
 

@@ -1,6 +1,6 @@
 const table = require('markdown-table')
 
-const fillArray = (fn, n) => {
+const fillArray = n => fn => {
   let arr = []
   const arrayFill = (fn, n) => {
     if (n === 1) {
@@ -13,7 +13,7 @@ const fillArray = (fn, n) => {
 
 const rollDie = (max, randomFn = Math.random) => Math.floor((randomFn() * max) + 1)
 const rollD6 = () => rollDie(6)
-const generateRolls = (rollFn = rollD6) => fillArray(rollFn, 4)
+const generateRolls = (rollFn = rollD6) => fillArray(4)(rollFn)
 const sortRolls = arr => arr.concat().sort()
 const dropLow = arr => sortRolls(arr).slice(1)
 const sum = arr => arr.reduce((a, b) => a + b, 0)
@@ -24,8 +24,9 @@ const outputTable = matrix => {
   return header + table(matrix, {rule: false})
 }
 
-const generateStatArray = (statFn = generateStat) => fillArray(statFn, 6)
-const generateStatMatrix = (arrayFn = generateStatArray) => fillArray(arrayFn, 6)
+const fillSix = (fn) => fillArray(6)(fn)
+const generateStatArray = (statFn = generateStat) => fillSix(statFn)
+const generateStatMatrix = (arrayFn = generateStatArray) => fillSix(arrayFn)
 
 module.exports = {
   fillArray,
