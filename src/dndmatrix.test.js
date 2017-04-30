@@ -14,6 +14,14 @@ test('rollDie', assert => {
   assert.end()
 })
 
+test('generateRolls', assert => {
+  const rollFn = () => 4
+  const expected = [4, 4, 4, 4]
+  const actual = dndmatrix.generateRolls(rollFn)
+  assert.deepEqual(actual, expected, 'generateRolls should return a four integer array of die rolls')
+  assert.end()
+})
+
 test('sortRolls', assert => {
   const rolls = [6, 2, 3, 1]
   const expected = [1, 2, 3, 6]
