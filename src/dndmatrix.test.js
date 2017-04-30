@@ -85,3 +85,18 @@ test('generateStatArray', assert => {
   assert.deepEqual(actual, expected, 'generateStatArray should return a six-element array of D&D stats')
   assert.end()
 })
+
+test('generateStatMatrix', assert => {
+  const arrayFn = () => [16, 14, 14, 12, 10, 8]
+  const expected = [
+    [16, 14, 14, 12, 10, 8],
+    [16, 14, 14, 12, 10, 8],
+    [16, 14, 14, 12, 10, 8],
+    [16, 14, 14, 12, 10, 8],
+    [16, 14, 14, 12, 10, 8],
+    [16, 14, 14, 12, 10, 8]
+  ]
+  const actual = dndmatrix.generateStatMatrix(arrayFn)
+  assert.deepEqual(actual, expected, 'generateStatMatrix should return a 6x6 matrix of stat rolls')
+  assert.end()
+})

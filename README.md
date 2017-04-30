@@ -64,6 +64,6 @@ Given a six-element array of six-element arrays `matrix`, returns a Github Flavo
 
 Returns a six-element array of stat rolls. The function to generate a stat roll can be injected, allowing for both unit testing and custom behavior. (Munchkins rejoice!)
 
-### `generateStatMatrix()`
+### `generateStatMatrix(arrayFn = generateStatArray)`
 
-Returns a six-element array of six stat rolls.
+Returns a six-element array of six stat rolls. To facilitate unit testing, the stat array function can be injected, but I can think of no practical reason why anyone would customize this function for purposes not involving unit tests. You'll just get six copies of the results of whatever function you pass in here.
