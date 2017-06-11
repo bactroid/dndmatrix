@@ -1,6 +1,6 @@
 {
   "name": "dndmatrix",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Roll up a D&D stat roll matrix",
   "main": "./dist/dndmatrix.js",
   "dependencies": {
